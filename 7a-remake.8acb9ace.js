@@ -714,7 +714,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"7clXR":[function(require,module,exports,__globalThis) {
-// console.log("Hello World!");
 
 },{}]},["bRAk1","7clXR"], "7clXR", "parcelRequire4c16", {})
 
