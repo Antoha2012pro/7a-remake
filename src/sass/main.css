@@ -59,4 +59,31 @@ body {
   .container {
     width: 1246px;
   }
+}
+
+.header {
+  position: fixed;
+  padding: 8px 0px;
+  background-color: #ea5d74;
+}
+.header__logo {
+  display: block;
+  width: 100px;
+  position: relative;
+  font-family: "Paytone One";
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 56px;
+  letter-spacing: 1px;
+  z-index: 10;
+  transition: 120ms;
+}
+.header__logo:hover {
+  opacity: 0.8;
+}
+.header__logo-img {
+  position: absolute;
+  top: 0px;
+  right: 39px;
+  width: 35px;
 }/*# sourceMappingURL=main.css.map */
