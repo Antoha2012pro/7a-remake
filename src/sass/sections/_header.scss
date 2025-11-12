@@ -4,7 +4,9 @@
     background-color: #ea5d74;
 
 
-    .container {}
+    .container {
+        position: relative;
+    }
 
     &__logo {
         display: block;
