@@ -99,16 +99,26 @@ header, section, footer {
 
 .header {
   position: fixed;
-  padding: 8px 0px;
+  padding: 48px 0px;
   background-color: #ea5d74;
 }
 .header .container {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 728px) {
+  .header .container {
+    justify-content: flex-start;
+    gap: 130px;
+  }
 }
 .header__logo {
   display: block;
   width: 100px;
   position: relative;
+  color: #D9D9D9;
   font-family: "Paytone One";
   font-size: 46px;
   font-weight: 400;
@@ -125,4 +135,41 @@ header, section, footer {
   top: 0px;
   right: 39px;
   width: 35px;
+}
+.header__items {
+  display: none;
+}
+@media screen and (min-width: 728px) {
+  .header__items {
+    display: flex;
+    gap: 95px;
+  }
+}
+.header__item-link {
+  color: #D9D9D9;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Montserrat;
+  font-size: 19px;
+  font-weight: 400;
+}
+.header__item-link:hover, .header__item-link:focus {
+  opacity: 0.8;
+}
+.header__btn {
+  display: block;
+  background-color: transparent;
+}
+.header__btn:hover, .header__btn:focus {
+  outline: 0;
+  opacity: 0.8;
+}
+@media screen and (min-width: 728px) {
+  .header__btn {
+    display: none;
+  }
+}
+.header__btn-svg {
+  width: 43px;
+  height: 43px;
+  fill: #e9d2cf;
 }/*# sourceMappingURL=main.css.map */
