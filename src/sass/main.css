@@ -196,20 +196,40 @@ header, section, footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column-reverse;
+  gap: 26px;
+}
+@media screen and (min-width: 1246px) {
+  .hero .container {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 .hero__block {
   display: flex;
   flex-direction: column;
   gap: 54px;
+  width: 100%;
+}
+@media screen and (min-width: 1246px) {
+  .hero__block {
+    width: auto;
+  }
 }
 .hero__title {
-  width: 543px;
+  width: 100%;
   color: #D9D9D9;
   font-family: Montserrat;
   font-size: 80px;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -2.4px;
+  overflow-wrap: break-word;
+}
+@media screen and (min-width: 1246px) {
+  .hero__title {
+    width: 543px;
+  }
 }
 .hero__title-span {
   background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
@@ -218,7 +238,7 @@ header, section, footer {
   -webkit-text-fill-color: transparent;
 }
 .hero__text {
-  width: 570px;
+  width: 100%;
   color: #D9D9D9;
   font-family: Montserrat;
   font-size: 20px;
@@ -226,12 +246,26 @@ header, section, footer {
   line-height: 1.6;
   letter-spacing: -0.4px;
 }
+@media screen and (min-width: 1246px) {
+  .hero__text {
+    width: 570px;
+  }
+}
 .hero__box {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
+@media screen and (min-width: 728px) {
+  .hero__box {
+    flex-wrap: nowrap;
+  }
+}
 .hero__box-btn {
-  padding: 19px 83px 20px 74px;
+  display: block;
+  width: 100%;
+  width: 100%;
+  padding: 19px 45px 20px 40px;
   background: transparent;
   border: none;
   color: #e9d2cf;
@@ -242,6 +276,12 @@ header, section, footer {
   letter-spacing: -0.48px;
   transition: all ease-in-out 250ms;
   position: relative;
+}
+@media screen and (min-width: 728px) {
+  .hero__box-btn {
+    padding: 19px 83px 20px 74px;
+    width: auto;
+  }
 }
 .hero__box-btn:not(:last-child)::before, .hero__box-btn:not(:last-child)::after {
   content: "";
@@ -266,10 +306,15 @@ header, section, footer {
   opacity: 1;
 }
 .hero__box-btn:last-child {
-  padding: 20px 54px;
+  padding: 20px 40px;
   border-radius: 82.834px;
   border: 1.023px solid var(--lll, #e9d2cf);
   background: rgba(18, 21, 23, 0.5607843137);
+}
+@media screen and (min-width: 728px) {
+  .hero__box-btn:last-child {
+    padding: 20px 54px;
+  }
 }
 .hero__box-btn:last-child:hover {
   background: #beb9b6;
@@ -277,7 +322,13 @@ header, section, footer {
 }
 .hero__items {
   display: flex;
+  flex-direction: column;
   gap: 46px;
+}
+@media screen and (min-width: 728px) {
+  .hero__items {
+    flex-direction: row;
+  }
 }
 .hero__item {
   display: flex;
@@ -290,6 +341,12 @@ header, section, footer {
   font-size: 62px;
   font-weight: 400;
   line-height: 1;
+  margin: 0px auto;
+}
+@media screen and (min-width: 728px) {
+  .hero__item-title {
+    margin: 0px;
+  }
 }
 .hero__item-title-span {
   background: linear-gradient(267deg, #237249 -46.81%, #35C66B 52.2%);
@@ -306,4 +363,63 @@ header, section, footer {
   font-weight: 400;
   line-height: 144.471%;
   letter-spacing: -0.4px;
+  margin: 0px auto;
+}
+@media screen and (min-width: 728px) {
+  .hero__item-text {
+    margin: 0px;
+  }
+}
+
+.make .container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 48px;
+}
+@media screen and (min-width: 728px) {
+  .make .container {
+    flex-direction: row;
+    gap: 0px;
+  }
+}
+.make__section {
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+}
+.make__section-title {
+  width: 100%;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 109.471%;
+  letter-spacing: -2.4px;
+  overflow-wrap: break-word;
+}
+@media screen and (min-width: 728px) {
+  .make__section-title {
+    width: 411px;
+  }
+}
+.make__section-title-span {
+  background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.make__section-text {
+  width: 100%;
+  color: #D9D9D9;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 163.471%;
+  letter-spacing: -0.4px;
+}
+@media screen and (min-width: 728px) {
+  .make__section-text {
+    width: 457px;
+  }
 }/*# sourceMappingURL=main.css.map */

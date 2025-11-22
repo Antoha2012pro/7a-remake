@@ -5,23 +5,39 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-direction: column-reverse;
+        gap: 26px;
+
+        @media screen and (min-width: 1246px) {
+            flex-direction: row;
+            gap: 0;
+        }
     }
 
     &__block {
         display: flex;
         flex-direction: column;
         gap: 54px;
+        width: 100%;
+
+        @media screen and (min-width: 1246px) {
+            width: auto;
+        }
     }
 
     &__title {
-        width: 543px;
+        width: 100%;
         color: $white-color-f;
         font-family: Montserrat;
         font-size: 80px;
         font-weight: 800;
         line-height: 1.1;
         letter-spacing: -2.4px;
+        overflow-wrap: break-word;
 
+        @media screen and (min-width: 1246px) {
+            width: 543px;
+        }
 
         &-span {
             background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
@@ -32,21 +48,35 @@
     }
 
     &__text {
-        width: 570px;
+        width: 100%;
         color: #D9D9D9;
         font-family: Montserrat;
         font-size: 20px;
         font-weight: 400;
         line-height: 1.6;
         letter-spacing: -0.4px;
+
+        @media screen and (min-width: 1246px) {
+            width: 570px;
+        }
     }
 
     &__box {
         display: flex;
+        flex-wrap: wrap;
         gap: 16px;
 
+        @media screen and (min-width: 728px) {
+            flex-wrap: nowrap;
+        }
+
+        @media screen and (min-width: 1246px) {}
+
         &-btn {
-            padding: 19px 83px 20px 74px;
+            display: block;
+            width: 100%;
+            width: 100%;
+            padding: 19px 45px 20px 40px;
             background: transparent;
             border: none;
             color: $white-color;
@@ -58,8 +88,14 @@
             transition: all ease-in-out 250ms;
             position: relative;
 
+            @media screen and (min-width: 728px) {
+                padding: 19px 83px 20px 74px;
+                width: auto;
+            }
+
 
             &:not(:last-child) {
+
                 &::before,
                 &::after {
                     content: "";
@@ -90,10 +126,14 @@
             }
 
             &:last-child {
-                padding: 20px 54px;
+                padding: 20px 40px;
                 border-radius: 82.834px;
                 border: 1.023px solid var(--lll, $white-color);
                 background: #1215178f;
+
+                @media screen and (min-width: 728px) {
+                    padding: 20px 54px;
+                }
 
                 &:hover {
                     background: #beb9b6;
@@ -105,7 +145,12 @@
 
     &__items {
         display: flex;
+        flex-direction: column;
         gap: 46px;
+
+        @media screen and (min-width: 728px) {
+            flex-direction: row;
+        }
     }
 
     &__item {
@@ -119,6 +164,11 @@
             font-size: 62px;
             font-weight: 400;
             line-height: 1;
+            margin: 0px auto;
+
+            @media screen and (min-width: 728px) {
+                margin: 0px;
+            }
 
             &-span {
                 background: linear-gradient(267deg, #237249 -46.81%, #35C66B 52.2%);
@@ -137,6 +187,11 @@
             font-weight: 400;
             line-height: 144.471%;
             letter-spacing: -0.4px;
+            margin: 0px auto;
+
+            @media screen and (min-width: 728px) {
+                margin: 0px;
+            }
         }
     }
 }

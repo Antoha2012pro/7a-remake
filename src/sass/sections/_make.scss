@@ -1,0 +1,58 @@
+.make {
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 48px;
+
+        @media screen and (min-width: 728px) {
+            flex-direction: row;
+            gap: 0px;
+        }
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 63px;
+
+        &-title {
+            width: 100%;
+            color: #FFF;
+            font-family: Montserrat;
+            font-size: 80px;
+            font-weight: 800;
+            line-height: 109.471%;
+            letter-spacing: -2.4px;
+            overflow-wrap: break-word;
+
+            @media screen and (min-width: 728px) {
+                width: 411px;
+            }
+
+            &-span {
+                background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &-text {
+            width: 100%;
+            color: $white-color-f;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 163.471%;
+            letter-spacing: -0.4px;
+
+            @media screen and (min-width: 728px) {
+                width: 457px;
+            }
+        }
+    }
+
+
+}
