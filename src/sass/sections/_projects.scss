@@ -1,0 +1,26 @@
+.projects {
+    padding: 64px 0px 64px 0px;
+
+    .container {
+
+    }
+
+    &__section {
+
+    }
+
+        &__title {
+            color: $white-color-f;
+            font-size: 53px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1.594px;
+
+            &-span {
+                background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+}

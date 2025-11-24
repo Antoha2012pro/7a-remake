@@ -422,4 +422,21 @@ header, section, footer {
   .make__section-text {
     width: 457px;
   }
+}
+
+.projects {
+  padding: 64px 0px 64px 0px;
+}
+.projects__title {
+  color: #D9D9D9;
+  font-size: 53px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.594px;
+}
+.projects__title-span {
+  background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=main.css.map */
