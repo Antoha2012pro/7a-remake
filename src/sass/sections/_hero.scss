@@ -40,7 +40,7 @@
         }
 
         &-span {
-            background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
+            background: linear-gradient(263deg, $gradient-1-color 3.14%, $gradient-2-color 87.2%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -49,7 +49,7 @@
 
     &__text {
         width: 100%;
-        color: #D9D9D9;
+        color: $white-color-f-t;
         font-family: Montserrat;
         font-size: 20px;
         font-weight: 400;
@@ -107,7 +107,7 @@
                 }
 
                 &::before {
-                    background: linear-gradient(265deg, #237249 6.79%, #35C66B 97.2%);
+                    background: linear-gradient(265deg, $gradient-1-color 6.79%, $gradient-2-color 97.2%);
                     opacity: 1;
                 }
 
@@ -171,7 +171,7 @@
             }
 
             &-span {
-                background: linear-gradient(267deg, #237249 -46.81%, #35C66B 52.2%);
+                background: linear-gradient(267deg, $gradient-1-color -46.81%, $gradient-2-color 52.2%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;

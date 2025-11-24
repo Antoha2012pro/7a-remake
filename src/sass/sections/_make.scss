@@ -19,7 +19,7 @@
 
         &-title {
             width: 100%;
-            color: #FFF;
+            color: $white-color-f;
             font-family: Montserrat;
             font-size: 80px;
             font-weight: 800;
@@ -32,7 +32,7 @@
             }
 
             &-span {
-                background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
+                background: linear-gradient(263deg, $gradient-1-color 3.14%, $gradient-2-color 87.2%);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -41,7 +41,7 @@
 
         &-text {
             width: 100%;
-            color: $white-color-f;
+            color: $white-color-f-t;
             font-family: Montserrat;
             font-size: 20px;
             font-weight: 400;
