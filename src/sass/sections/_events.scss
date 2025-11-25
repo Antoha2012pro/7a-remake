@@ -1,0 +1,107 @@
+.events {
+    padding: 0px 0px 64px 0px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+        overflow: hidden;
+    }
+
+    &__section {}
+
+    &__section:first-child {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        margin: 0px 0px 0px auto;
+        max-width: max-content;
+    }
+
+    &__title {
+        max-width: 289px;
+        width: 272.907px;
+        color: $white-color-f;
+        font-size: 53px;
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -1.594px;
+
+        &-span {
+            background: linear-gradient(263deg, $gradient-1-color 3.14%, $gradient-2-color 87.2%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__text {
+        max-width: 289px;
+        color: $white-color-f-t;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6;
+        letter-spacing: -0.28px;
+    }
+
+    &__section:last-child {
+        position: relative;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 55px;
+        height: 55px;
+        border-radius: 17px;
+        border: 1px solid $green-color;
+        background-color: transparent;
+    }
+
+    &__section-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 13px;
+        grid-template-areas:
+            "a a a b b b"
+            "c c d d e e";
+        width: 711px;
+        margin: 0px 0px 0px 25%;
+    }
+
+    &__event:nth-child(1) {
+        grid-area: a;
+    }
+
+    &__event:nth-child(2) {
+        grid-area: b;
+    }
+
+    &__event:nth-child(3) {
+        grid-area: c;
+    }
+
+    &__event:nth-child(4) {
+        grid-area: d;
+    }
+
+    &__event:nth-child(5) {
+        grid-area: e;
+    }
+
+    &__event {
+        border-radius: 17px;
+        padding: 25px 0px 54px 15px;
+        background: red;
+
+        &-title {
+            color: $white-color-f;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.1;
+        }
+    }
+}

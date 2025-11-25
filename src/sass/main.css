@@ -471,6 +471,7 @@ header, section, footer {
   display: flex;
   gap: 36px;
   align-items: center;
+  direction: rtl;
 }
 .projects__item {
   position: relative;
@@ -484,4 +485,94 @@ header, section, footer {
 }
 .projects__item-img {
   margin: 0px 0px 10px 0px;
+}
+
+.events {
+  padding: 0px 0px 64px 0px;
+}
+.events .container {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  overflow: hidden;
+}
+.events__section:first-child {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin: 0px 0px 0px auto;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.events__title {
+  max-width: 289px;
+  width: 272.907px;
+  color: #ffffff;
+  font-size: 53px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1.594px;
+}
+.events__title-span {
+  background: linear-gradient(263deg, #237249 3.14%, #35C66B 87.2%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.events__text {
+  max-width: 289px;
+  color: #D9D9D9;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.28px;
+}
+.events__section:last-child {
+  position: relative;
+}
+.events__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  border-radius: 17px;
+  border: 1px solid #237249;
+  background-color: transparent;
+}
+.events__section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 13px;
+  grid-template-areas: "a a a b b b" "c c d d e e";
+  width: 711px;
+  margin: 0px 0px 0px 25%;
+}
+.events__event:nth-child(1) {
+  grid-area: a;
+}
+.events__event:nth-child(2) {
+  grid-area: b;
+}
+.events__event:nth-child(3) {
+  grid-area: c;
+}
+.events__event:nth-child(4) {
+  grid-area: d;
+}
+.events__event:nth-child(5) {
+  grid-area: e;
+}
+.events__event {
+  border-radius: 17px;
+  padding: 25px 0px 54px 15px;
+  background: red;
+}
+.events__event-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1;
 }/*# sourceMappingURL=main.css.map */
