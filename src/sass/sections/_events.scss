@@ -1,11 +1,15 @@
 .events {
     padding: 0px 0px 64px 0px;
+    overflow: hidden;
 
     .container {
         display: flex;
         flex-direction: column;
         gap: 38px;
-        overflow: hidden;
+
+        @media screen and (min-width: 728px) {
+            gap: 54px;
+        }
     }
 
     &__section {}
@@ -17,16 +21,28 @@
         gap: 36px;
         margin: 0px 0px 0px auto;
         max-width: max-content;
+
+        @media screen and (min-width: 728px) {
+            flex-direction: row-reverse;
+            margin: 0px 0px 0px 0px;
+            gap: 72px;
+            max-width: 100%;
+        }
     }
 
     &__title {
         max-width: 289px;
-        width: 272.907px;
         color: $white-color-f;
         font-size: 53px;
         font-weight: 800;
         line-height: 1.1;
-        letter-spacing: -1.594px;
+        letter-spacing: -1.6px;
+
+        @media screen and (min-width: 728px) {
+            max-width: 366px;
+            font-size: 80px;
+            letter-spacing: -2.4px;
+        }
 
         &-span {
             background: linear-gradient(263deg, $gradient-1-color 3.14%, $gradient-2-color 87.2%);
@@ -43,6 +59,12 @@
         font-weight: 400;
         line-height: 1.6;
         letter-spacing: -0.28px;
+
+        @media screen and (min-width: 728px) {
+            max-width: 457px;
+            font-size: 20px;
+            letter-spacing: -0.4px;
+        }
     }
 
     &__section:last-child {
@@ -50,6 +72,7 @@
     }
 
     &__btn {
+        display: inline;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -58,6 +81,10 @@
         border-radius: 17px;
         border: 1px solid $green-color;
         background-color: transparent;
+
+        @media screen and (min-width: 728px) {
+            display: none;
+        }
     }
 
     &__section-content {
@@ -70,6 +97,11 @@
             "c c d d e e";
         width: 711px;
         margin: 0px 0px 0px 25%;
+
+        @media screen and (min-width: 728px) {
+            margin: 0px 0px 0px 0px;
+            width: 100%;
+        }
     }
 
     &__event:nth-child(1) {
@@ -96,6 +128,12 @@
         border-radius: 17px;
         padding: 25px 0px 54px 15px;
         background: red;
+        text-align: start;
+
+        @media screen and (min-width: 1246px) {
+            padding: 32px 0px 54px 0px;
+            text-align: center;
+        }
 
         &-title {
             color: $white-color-f;

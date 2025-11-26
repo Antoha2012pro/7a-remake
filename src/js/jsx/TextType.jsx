@@ -22,6 +22,11 @@ const TextType = ({
   onSentenceComplete,
   startOnVisible = false,
   reverseMode = false,
+
+  // подсветка слова
+  highlightWord,
+  highlightClassName = '',
+
   ...props
 }) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -45,6 +50,7 @@ const TextType = ({
     return textColors[currentTextIndex % textColors.length];
   };
 
+  // старт по видимости
   useEffect(() => {
     if (!startOnVisible || !containerRef.current) return;
 
@@ -63,6 +69,7 @@ const TextType = ({
     return () => observer.disconnect();
   }, [startOnVisible]);
 
+  // мигание курсора
   useEffect(() => {
     if (showCursor && cursorRef.current) {
       gsap.set(cursorRef.current, { opacity: 1 });
@@ -71,17 +78,20 @@ const TextType = ({
         duration: cursorBlinkDuration,
         repeat: -1,
         yoyo: true,
-        ease: 'power2.inOut'
+        ease: 'power2.inOut',
       });
     }
   }, [showCursor, cursorBlinkDuration]);
 
+  // основная логика тайпинга
   useEffect(() => {
     if (!isVisible) return;
 
     let timeout;
     const currentText = textArray[currentTextIndex];
-    const processedText = reverseMode ? currentText.split('').reverse().join('') : currentText;
+    const processedText = reverseMode
+      ? currentText.split('').reverse().join('')
+      : currentText;
 
     const executeTypingAnimation = () => {
       if (isDeleting) {
@@ -142,26 +152,74 @@ const TextType = ({
     isVisible,
     reverseMode,
     variableSpeed,
-    onSentenceComplete
+    onSentenceComplete,
   ]);
 
   const shouldHideCursor =
-    hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
+    hideCursorWhileTyping &&
+    (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
+
+  // ---------- подсветка во время набора ----------
+  // Работает только для обычного (не реверсного) режима — под это и заточено.
+  const fullText = textArray[currentTextIndex] || '';
+  const highlightIndex =
+    !reverseMode && highlightWord ? fullText.indexOf(highlightWord) : -1;
+
+  let contentNode = displayedText;
+
+  if (highlightIndex !== -1) {
+    const wordStart = highlightIndex;
+    const wordEnd = highlightIndex + highlightWord.length;
+
+    const len = displayedText.length;
+
+    // часть до слова (или до текущей длины)
+    const beforeEnd = Math.min(len, wordStart);
+    const before = displayedText.slice(0, beforeEnd);
+
+    // часть слова, которая уже успела напечататься
+    const highlightStartInDisplayed = Math.min(Math.max(len > wordStart ? wordStart : len, 0), len);
+    const highlightEndInDisplayed = Math.min(wordEnd, len);
+
+    const highlighted =
+      highlightEndInDisplayed > highlightStartInDisplayed
+        ? displayedText.slice(highlightStartInDisplayed, highlightEndInDisplayed)
+        : '';
+
+    // остаток после слова (если уже напечатали дальше)
+    const afterStart = Math.min(wordEnd, len);
+    const after = displayedText.slice(afterStart);
+
+    contentNode = (
+      <>
+        {before}
+        {highlighted && (
+          <span className={highlightClassName}>{highlighted}</span>
+        )}
+        {after}
+      </>
+    );
+  }
 
   return createElement(
     Component,
     {
       ref: containerRef,
       className: `text-type ${className}`,
-      ...props
+      ...props,
     },
-    <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }}>
-      {displayedText}
+    <span
+      className="text-type__content"
+      style={{ color: getCurrentTextColor() || 'inherit' }}
+    >
+      {contentNode}
     </span>,
     showCursor && (
       <span
         ref={cursorRef}
-        className={`text-type__cursor ${cursorClassName} ${shouldHideCursor ? 'text-type__cursor--hidden' : ''}`}
+        className={`text-type__cursor ${cursorClassName} ${
+          shouldHideCursor ? 'text-type__cursor--hidden' : ''
+        }`}
       >
         {cursorCharacter}
       </span>

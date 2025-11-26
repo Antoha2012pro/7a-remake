@@ -5,6 +5,7 @@ import TextType from '../jsx/TextType.jsx';
 
 const rootEl = document.getElementById('cursor-root');
 const rootTextTypeEl = document.getElementById('texttype-root');
+const heroRootTextTypeEl = document.getElementById('hero-title');
 
 if (rootEl) {
   createRoot(rootEl).render(
@@ -21,15 +22,35 @@ if (rootEl) {
   );
 }
 
-if (rootTextTypeEl) {
-  createRoot(rootTextTypeEl).render(
-      <TextType 
-        text={["Text typing effect", "for your websites", "Happy coding!"]}
-        typingSpeed={75}
-        pauseDuration={1500}
-        showCursor={true}
-        cursorCharacter="|"
-      />
+// Если нужен отдельный тайпер где-то ещё — можно использовать rootTextTypeEl
+// if (rootTextTypeEl) {
+//   createRoot(rootTextTypeEl).render(
+//     <TextType
+//       text={['Some text', 'Another text']}
+//       typingSpeed={75}
+//       pauseDuration={1500}
+//       showCursor={true}
+//       cursorCharacter="|"
+//     />
+//   );
+// }
+
+if (heroRootTextTypeEl) {
+  createRoot(heroRootTextTypeEl).render(
+    <TextType
+      text={[
+        'Website 7A',
+        'Neue Website der Klasse 7A',
+        '7A qwerty',
+      ]}
+      typingSpeed={75}
+      pauseDuration={1500}
+      showCursor={true}
+      cursorCharacter="_"
+      // 🔑 слово, которое нужно выделить спаном
+      highlightWord="7A"
+      highlightClassName="hero__title-span"
+    />
   );
 }
 

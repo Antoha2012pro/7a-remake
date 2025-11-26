@@ -7,6 +7,7 @@ html {
 body {
     position: relative;
     background-color: $gray-color;
+    font-family: "Montserrat", sans-serif;
     // font-family: "DM Sans", serif;
     // background-color: $black-color;
 }
@@ -29,6 +30,7 @@ header, section, footer {
 .text-cursor-item {
   position: absolute;
   will-change: transform, opacity;
+  color: $white-color;
 }
 
 // TextType
