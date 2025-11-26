@@ -21,14 +21,16 @@
             width: 100%;
             color: $white-color-f;
             font-family: Montserrat;
-            font-size: 80px;
+            font-size: 48px;
+            letter-spacing: -1.44px;
             font-weight: 800;
-            line-height: 109.471%;
-            letter-spacing: -2.4px;
-             overflow-wrap: break-word;
+            line-height: 1.1;
+            overflow-wrap: break-word;
 
             @media screen and (min-width: 728px) {
                 width: 411px;
+                font-size: 80px;
+                letter-spacing: -2.4px;
             }
 
             &-span {
@@ -43,13 +45,15 @@
             width: 100%;
             color: $white-color-f-t;
             font-family: Montserrat;
-            font-size: 20px;
+            font-size: 14px;
+            letter-spacing: -0.28px;
             font-weight: 400;
-            line-height: 163.471%;
-            letter-spacing: -0.4px;
+            line-height: 1.6;
 
             @media screen and (min-width: 728px) {
                 width: 457px;
+                font-size: 20px;
+                letter-spacing: -0.4px;
             }
         }
     }

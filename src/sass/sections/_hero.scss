@@ -29,11 +29,16 @@
         width: 100%;
         color: $white-color-f;
         font-family: Montserrat;
-        font-size: 80px;
+        font-size: 52px;
         font-weight: 800;
         line-height: 1.1;
-        letter-spacing: -2.4px;
+        letter-spacing: -1.44px;
         overflow-wrap: break-word;
+
+        @media screen and (min-width: 728px) {
+            font-size: 80px;
+            letter-spacing: -2.4px;
+        }
 
         @media screen and (min-width: 1246px) {
             width: 543px;
@@ -50,11 +55,17 @@
     &__text {
         width: 100%;
         color: $white-color-f-t;
-        font-family: Montserrat;
-        font-size: 20px;
+        font-size: 14px;
         font-weight: 400;
         line-height: 1.6;
-        letter-spacing: -0.4px;
+        letter-spacing: -0.24px;
+        font-weight: 400;
+        line-height: 1.6;
+
+        @media screen and (min-width: 728px) {
+            font-size: 20px;
+            letter-spacing: -0.4px;
+        }
 
         @media screen and (min-width: 1246px) {
             width: 570px;
@@ -64,10 +75,12 @@
     &__box {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 16px;
 
         @media screen and (min-width: 728px) {
             flex-wrap: nowrap;
+            justify-content: flex-start;
         }
 
         @media screen and (min-width: 1246px) {}
@@ -75,22 +88,23 @@
         &-btn {
             display: block;
             width: 100%;
-            width: 100%;
-            padding: 19px 45px 20px 40px;
+            padding: 13px 53px 13px 53px;
             background: transparent;
             border: none;
             color: $white-color;
             font-family: Montserrat;
-            font-size: 24px;
+            font-size: 18px;
+            letter-spacing: -0.322px;
             font-weight: 600;
             line-height: 1.5;
-            letter-spacing: -0.48px;
             transition: all ease-in-out 250ms;
             position: relative;
 
             @media screen and (min-width: 728px) {
                 padding: 19px 83px 20px 74px;
                 width: auto;
+                font-size: 24px;
+                letter-spacing: -0.48px;
             }
 
 
@@ -126,13 +140,15 @@
             }
 
             &:last-child {
-                padding: 20px 40px;
+                max-width: 150px;
+                padding: 13px 36px;
                 border-radius: 82.834px;
                 border: 1.023px solid var(--lll, $white-color);
                 background: #1215178f;
 
                 @media screen and (min-width: 728px) {
                     padding: 20px 54px;
+                    max-width: 168px;
                 }
 
                 &:hover {
