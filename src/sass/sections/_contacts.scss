@@ -16,7 +16,7 @@
             width: 328px;
             height: 262.4px;
             border-radius: 328px;
-            background: linear-gradient(267deg, rgba(35, 114, 73, 0.08) 3.05%, rgba(53, 198, 107, 0.11) 40.73%);
+            background: linear-gradient(267deg, $gradient-bcg-color1 3.05%, $gradient-bcg-color2 40.73%);
             filter: blur(64px);
             z-index: -1;
         }
@@ -131,7 +131,7 @@
             &-link {
                 display: flex;
                 gap: 16px;
-                color: $white-color;
+                color: $link-color;
                 font-size: 21.438px;
                 font-weight: 500;
                 line-height: 1.3;

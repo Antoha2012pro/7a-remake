@@ -126,7 +126,7 @@
                 }
 
                 &::after {
-                    background: linear-gradient(265deg, #e24338 6.79%, #d37767 97.2%);
+                    background: linear-gradient(265deg, $gradient-hover-1-color 6.79%, $gradient-hover-2-color 97.2%);
                     opacity: 0;
                 }
 
@@ -142,9 +142,8 @@
             &:last-child {
                 max-width: 150px;
                 padding: 13px 36px;
-                border-radius: 82.834px;
-                border: 1.023px solid var(--lll, $white-color);
-                background: #1215178f;
+                border-radius: 83px;
+                background: $btn-hover-color1;
 
                 @media screen and (min-width: 728px) {
                     padding: 20px 54px;
@@ -152,7 +151,7 @@
                 }
 
                 &:hover {
-                    background: #beb9b6;
+                    background: $btn-hover-color2;
                     color: $gray-color;
                 }
             }
@@ -196,7 +195,7 @@
 
         &-text {
             width: 122.717px;
-            color: #D9D9D9;
+            color: $white-color-f-t;
             font-family: Montserrat;
             font-size: 20px;
             font-style: normal;
