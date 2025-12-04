@@ -39,12 +39,12 @@ if (heroRootTextTypeEl) {
   createRoot(heroRootTextTypeEl).render(
     <TextType
       text={[
-        'Gemeinsam in der 7A',
+        'Gemein\u00ADsam in der 7A',
+        'Will\u00ADkom\u00ADmen in der Klasse 7A',
         'Die 7A stellt sich vor',
         'Willkommen bei uns, der 7A',
         'Lernen in der Klasse 7A',
         '7A an der Petrischule',
-        'Willkommen in der Klasse 7A',
       ]}
       typingSpeed={150}
       pauseDuration={3000}
