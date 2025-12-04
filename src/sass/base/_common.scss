@@ -1,19 +1,46 @@
 html {
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    // scrollbar-color: $bcg-color $black-color;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  // scrollbar-color: $bcg-color $black-color;
 }
 
 body {
-    position: relative;
-    background-color: $white-bcg-color;
-    font-family: "Montserrat", sans-serif;
-    // font-family: "DM Sans", serif;
-    // background-color: $black-color;
+  position: relative;
+  background-color: $white-bcg-color;
+  font-family: "Montserrat", sans-serif;
+  // font-family: "DM Sans", serif;
+  // background-color: $black-color;
 }
 
-header, section, footer {
-    width: 100%;
+header,
+section,
+footer {
+  width: 100%;
+}
+
+section {
+  &:not(:last-child) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 1px;
+      background-color: $gray-color;
+
+      @media screen and (min-width: 728px) {
+        width: 560px;
+      }
+
+      @media screen and (min-width: 1246px) {
+        width: 750px;
+      }
+    }
+  }
 }
 
 // TextCursor.jsx
@@ -22,11 +49,13 @@ header, section, footer {
   inset: 0;
   pointer-events: none;
 }
+
 .text-cursor-inner {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
 .text-cursor-item {
   position: absolute;
   will-change: transform, opacity;

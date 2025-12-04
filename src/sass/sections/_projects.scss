@@ -9,21 +9,27 @@
         gap: 42px;
         overflow-x: visible;
         z-index: 2;
+
+        @media screen and (min-width: 728px) {
+            gap: 54px;
+        }
     }
 
     &__section {
         display: flex;
 
         &-btn {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
+            // position: absolute;
+            // right: 0;
+            // top: 50%;
+            // transform: translateY(-50%);
             border: 1px solid $green-color;
             background-color: transparent;
             border-radius: 18px;
-            width: 55px;
-            height: 55px;
+            width: 84px;
+            height: 84px;
+            padding: 20px 25px;
+            margin: 0px 181px 0px 0px;
         }
     }
 
@@ -39,6 +45,21 @@
         font-weight: 800;
         line-height: 1.1;
         overflow-wrap: break-word;
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -220px;
+            left: 200px;
+            width: 289px;
+            height: 245px;
+            border-radius: 289px;
+            background: linear-gradient(267deg, $gradient-bcg2-color1 3.05%, $gradient-bcg2-color2 40.73%);
+            filter: blur(72.79999542236328px);
+            z-index: -1;
+        }
 
         @media screen and (min-width: 728px) {
             overflow-wrap: normal;
@@ -70,9 +91,14 @@
 
     &__section:last-child {
         width: 100%;
-        height: 190px;
+        height: 500px;
         position: relative;
         z-index: 3;
+
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 40px;
     }
 
     &__items {
@@ -81,8 +107,9 @@
         // right: 130px;
         display: flex;
         gap: 36px;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: row-reverse;
+        flex: 1;
     }
 
     &__item {
@@ -96,6 +123,21 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 200px;
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 30px;
+            right: 20px;
+            width: 135px;
+            height: 70px;
+            background: linear-gradient(267deg, $gradient-bcg-color1 3.14%, $gradient-bcg-color2 43.82%);
+            filter: blur(70px);
+            z-index: -1;
+        }
 
         &-img {
             margin: 0px 0px 10px 0px;

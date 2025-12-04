@@ -39,12 +39,15 @@ if (heroRootTextTypeEl) {
   createRoot(heroRootTextTypeEl).render(
     <TextType
       text={[
-        'Website 7A',
-        'Neue Website der Klasse 7A',
-        '7A qwerty',
+        'Gemeinsam in der 7A',
+        'Die 7A stellt sich vor',
+        'Willkommen bei uns, der 7A',
+        'Lernen in der Klasse 7A',
+        '7A an der Petrischule',
+        'Willkommen in der Klasse 7A',
       ]}
-      typingSpeed={75}
-      pauseDuration={1500}
+      typingSpeed={150}
+      pauseDuration={3000}
       showCursor={true}
       cursorCharacter="_"
       // 🔑 слово, которое нужно выделить спаном

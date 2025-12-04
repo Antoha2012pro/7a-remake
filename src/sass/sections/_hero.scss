@@ -7,6 +7,21 @@
         align-items: center;
         flex-direction: column-reverse;
         gap: 26px;
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: -40px;
+            width: 324px;
+            height: 324px;
+            border-radius: 324px;
+            background: linear-gradient(267deg, $gradient-bcg2-color1 3.05%, $gradient-bcg2-color2 40.73%);
+            filter: blur(87.75px);
+            z-index: -1;
+        }
 
         @media screen and (min-width: 1246px) {
             flex-direction: row;
@@ -43,6 +58,13 @@
         @media screen and (min-width: 1246px) {
             width: 543px;
         }
+
+        &-span {
+            background: linear-gradient(267deg, $gradient-1-color -46.81%, $gradient-2-color 52.2%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 
     &__text {
@@ -54,10 +76,10 @@
         letter-spacing: -0.24px;
         font-weight: 400;
         line-height: 1.6;
-            background: linear-gradient(263deg, $gradient-1-color 3.14%, $gradient-2-color 87.2%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        background: linear-gradient(263deg, $gradient-1-color 3.14%, $gradient-2-color 87.2%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         @media screen and (min-width: 728px) {
             font-size: 20px;
