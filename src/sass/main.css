@@ -60,7 +60,7 @@ header, section, footer {
 .text-cursor-item {
   position: absolute;
   will-change: transform, opacity;
-  color: #e9d2cf;
+  color: #330e12;
 }
 
 .text-type {
@@ -237,12 +237,6 @@ header, section, footer {
     width: 543px;
   }
 }
-.hero__title-span {
-  background: linear-gradient(263deg, #1d351d 3.14%, #325632 87.2%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .hero__text {
   width: 100%;
   color: #330e12;
@@ -252,6 +246,10 @@ header, section, footer {
   letter-spacing: -0.24px;
   font-weight: 400;
   line-height: 1.6;
+  background: linear-gradient(263deg, #1d351d 3.14%, #325632 87.2%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media screen and (min-width: 728px) {
   .hero__text {
@@ -417,7 +415,7 @@ header, section, footer {
 }
 @media screen and (min-width: 728px) {
   .make__section-title {
-    width: 411px;
+    width: 500px;
     font-size: 80px;
     letter-spacing: -2.4px;
   }
